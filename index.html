@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Library</title>
+  </head>
+
+  <style>
+    #container {
+      padding: 10px;
+      background-color: rosybrown;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    #form-container {
+      display: inline-block;
+      padding: 10px;
+      background-color: crimson;
+      max-width: 300px;
+    }
+
+    #book-list-container {
+      display: inline-block;
+      padding: 10px;
+      background-color: crimson;
+      max-width: 350px;
+    }
+    #searchedBook {
+      display: inline-block;
+      list-style: none;
+
+      background-color: crimson;
+      max-width: 300px;
+      min-width: 300px;
+      margin-left: 200px;
+      margin-bottom: 100px;
+      margin-top: 10px;
+    }
+
+    #book-list {
+      list-style: none;
+    }
+
+    #book-search-container {
+      display: inline-block;
+text-align: center;
+      background-color: crimson;
+      
+      max-width: 300px;
+      min-width: 270px;
+    }
+
+    
+
+    h1 {
+      color: #f3f3f3;
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      margin-top: 10px;
+      color: greenyellow;
+    }
+
+    button {
+      display: block;
+      padding: 6px 15px;
+      border-radius: 5px;
+      width: 150px;
+      margin: auto;
+    }
+
+    form {
+      max-width: 200px;
+      margin: auto;
+    }
+
+    input {
+      width: 180px;
+      padding: 4px 8px;
+    }
+    #book-search-input {
+      display: inline-block;
+      
+     
+      max-width: 350px;
+    }
+    #search-button {
+      display: inline;
+      padding: 6px 15px;
+      border-radius: 5px;
+      width: 150px;
+      
+      margin-top: 10px;
+    }
+    #searched-list {
+      list-style: none;
+      padding: 10px 6px;
+      color: black;
+      font-size: 20px;
+      border: 1px solid white;
+    }
+    
+     
+  </style>
+
+  <body>
+    <div id="container">
+      <div id="form-container">
+        <h1>BOOK LIBRARY</h1>
+      
+
+        <form id="book-form">
+          <label for="name"> Name: </label>
+          <input type="text" id="name" name="name" value="Ananda Matha" />
+          <label for="author"> Author: </label>
+          <input type="text" id="author" name="author" value="Bankim Chandra" />
+          <label for="publisher"> Publisher: </label>
+          <input
+            type="text"
+            id="publisher"
+            name="publisher"
+            value="Gorakh Press"
+          />
+          <label for="price"> Price: </label>
+          <input type="text" id="price" name="price" value="200" />
+          <label for="favourite">IsFavorite?:</label>
+          <input
+            type="checkbox"
+            id="favourite"
+            name="favorite"
+            value="fav"
+            checked
+          />
+          <p><button type="submit">Submit Form</button></p>
+        </form>
+      </div>
+
+      <div id="book-list-container">
+        <h1>BOOK LIST</h1>
+        <ul id="book-list"></ul>
+        <button type="button" id="refresh-books-button">Refresh</button>
+      </div>
+
+      <div id="book-search-container">
+        <form id="search-bar" >
+        <h1>BOOK SEARCH</h1>
+        <input type="search" name="search" id="book-search-input" placeholder="Enter book name" />
+        <label  for="favouriteCheckbox">Favourite Books</label>
+        <input type="checkbox" name="favouriteCheckbox" id="favouriteCheckbox" />
+        <button type="button"  id="search-button">search</button>
+        
+      </div>
+      </form>
+      <div>
+        <h1>Searched-book</h1>
+        <ul id="searched-list"></ul>
+      </div>
+    </div>
+
+    <script src="scripts/api.js" type="module"></script>
+  </body>
+</html>
